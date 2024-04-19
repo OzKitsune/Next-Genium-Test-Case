@@ -51,3 +51,16 @@ func move() -> void:
 	state_machine.travel(anim_tree_state_keys[current_state])
 	
 	move_and_slide()
+
+
+func add_key() -> void:
+	keys += 1
+	Globals.hud.set_keys(keys)
+
+
+func use_key() -> bool:
+	if keys == 0:
+		return false
+	
+	keys -= 1
+	return true
