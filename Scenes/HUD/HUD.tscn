@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn6wtaw4fuicy"]
+
+[ext_resource type="Script" path="res://Code/HUD.gd" id="1_bsvrw"]
+
+[sub_resource type="Animation" id="Animation_d2c8s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Message:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h3kvo"]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Message:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t7gbt"]
+_data = {
+"RESET": SubResource("Animation_d2c8s"),
+"show": SubResource("Animation_h3kvo")
+}
+
+[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player")]
+script = ExtResource("1_bsvrw")
+hp_text_label = NodePath("Control/PlayerInfo/VBoxContainer/HPRichTextLabel")
+keys_text_label = NodePath("Control/PlayerInfo/VBoxContainer/KeysRichTextLabel")
+message_text_label = NodePath("Control/Message/MessageRichTextLabel")
+message_player = NodePath("Control/MessageAnimationPlayer")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInfo" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 60.0
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPRichTextLabel" type="RichTextLabel" parent="Control/PlayerInfo/VBoxContainer"]
+layout_mode = 2
+text = "HP 10 / 10"
+fit_content = true
+scroll_active = false
+
+[node name="KeysRichTextLabel" type="RichTextLabel" parent="Control/PlayerInfo/VBoxContainer"]
+layout_mode = 2
+text = "Ключи: 0"
+fit_content = true
+scroll_active = false
+
+[node name="Message" type="ColorRect" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -36.0
+offset_right = 250.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[node name="MessageRichTextLabel" type="RichTextLabel" parent="Control/Message"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Текст сообщения интерактивного объекта"
+fit_content = true
+scroll_active = false
+
+[node name="MessageAnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_t7gbt")
+}
