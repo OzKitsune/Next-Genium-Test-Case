@@ -1,4 +1,7 @@
+class_name Player
+
 extends CharacterBody2D
+
 
 @export_category("Параметры персонажа")
 @export_range(10, 100) var speed: int
@@ -7,7 +10,7 @@ extends CharacterBody2D
 var hp: int = max_hp
 var keys: int = 0
 
-@export_category("Параметры персонажа")
+@export_category("Ссылки на узлы")
 @export var interaction_area: Area2D
 @export var animation_tree: AnimationTree
 
