@@ -172,6 +172,47 @@ tracks/2/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_8dpnq"]
+resource_name = "idle_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_4ur2w"]
 resource_name = "idle_left"
 length = 0.8
@@ -459,47 +500,6 @@ tracks/2/keys = {
 "values": [3.14159]
 }
 
-[sub_resource type="Animation" id="Animation_8dpnq"]
-resource_name = "idle_down"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o43si"]
 _data = {
 "RESET": SubResource("Animation_skio0"),
@@ -537,6 +537,7 @@ blend_point_3/pos = Vector2(0, -1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7e4nm"]
+graph_offset = Vector2(-985.02, 78.0697)
 nodes/idle_bs2d/node = SubResource("AnimationNodeBlendSpace2D_mu8nx")
 nodes/idle_bs2d/position = Vector2(60, 80)
 nodes/output/position = Vector2(340, 80)
@@ -560,11 +561,13 @@ blend_point_0/pos = Vector2(-1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_wd2l3")
 blend_point_1/pos = Vector2(0, 1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_g7vbs")
-blend_point_2/pos = Vector2(0, -1)
+blend_point_2/pos = Vector2(0, -0.9)
 blend_point_3/node = SubResource("AnimationNodeAnimation_kedei")
 blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1xkeh"]
+graph_offset = Vector2(-1533.18, -40.34)
 nodes/output/position = Vector2(460, 80)
 nodes/walk_bs2d/node = SubResource("AnimationNodeBlendSpace2D_1s1hp")
 nodes/walk_bs2d/position = Vector2(180, 80)
@@ -582,7 +585,7 @@ states/End/position = Vector2(580, 100)
 states/idle/node = SubResource("AnimationNodeBlendTree_7e4nm")
 states/idle/position = Vector2(385, 100)
 states/walk/node = SubResource("AnimationNodeBlendTree_1xkeh")
-states/walk/position = Vector2(385, 209)
+states/walk/position = Vector2(385, 210)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_5k0nk"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_ls6wu"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_61gdt")]
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("interaction_area", "animation_tree")]
@@ -617,4 +620,4 @@ parameters/idle/idle_bs2d/blend_position = Vector2(0, 0)
 parameters/walk/walk_bs2d/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(4, 4)
