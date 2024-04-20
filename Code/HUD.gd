@@ -25,4 +25,5 @@ func set_keys(number: int) -> void:
 
 func show_message(text: String) -> void:
 	message_text_label.text = MESSAGE_TEXT % text
+	message_player.play("RESET")
 	message_player.play("show")
