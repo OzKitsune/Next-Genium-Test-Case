@@ -70,6 +70,10 @@ func use_key() -> bool:
 	if keys == 0:
 		return false
 	
+	var result = await Game.instance.hud.show_confirm()
+	if not result:
+		return false
+	
 	keys -= 1
 	Game.instance.hud.set_keys(keys)
 	return true
