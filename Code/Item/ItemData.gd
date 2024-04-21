@@ -16,6 +16,7 @@ extends Resource
 var path_to_scene: String
 
 
+## Создать экзмпляр класса Item.
 func create_item() -> Item:
 	var item = item_script.new() as Item
 	item.item_data = self
