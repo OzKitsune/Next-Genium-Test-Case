@@ -16,6 +16,7 @@ func _ready():
 	sprite.texture = item_data.image
 	start_index = get_index()
 	area.body_entered.connect(collect)
+	item_data.path_to_scene = scene_file_path
 
 
 func collect(body: Node2D) -> void:
