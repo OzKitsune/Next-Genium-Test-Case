@@ -67,7 +67,7 @@ func load_state():
 func close_all_doors() -> void:
 	var doors = find_children("*", "Door")
 	for door: Door in doors:
-		door.closed = true
+		door.set_door_status(true, door.can_opened_with_key)
 
 
 static func close_all_doors_on_location(location_name: String):
