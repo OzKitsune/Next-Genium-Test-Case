@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ckd1tnrqjghfw"]
+
+[ext_resource type="Texture2D" uid="uid://jr4n6h6jxwa2" path="res://2D/Pixel Art Icon Pack/Potion/Green Potion 3.png" id="1_0houf"]
+[ext_resource type="Script" path="res://Code/Item/List/AlarmPotion.gd" id="2_tyh7b"]
+[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_ukwmv"]
+
+[resource]
+script = ExtResource("3_ukwmv")
+item_script = ExtResource("2_tyh7b")
+name = "Зелье сигнализации"
+description = "Запирает все открытые дома на улице."
+collectable = true
+usable = true
+consumable = true
+image = ExtResource("1_0houf")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvfv76ug1rmnc"]
+
+[ext_resource type="Script" path="res://Code/Item/SceneItem.gd" id="1_8j8tu"]
+[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2D/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="1_inknn"]
+[ext_resource type="Resource" uid="uid://bvxof6rgjgejp" path="res://Resources/Items/Olives.tres" id="2_ocoja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asf1t"]
+atlas = ExtResource("1_inknn")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7dt5"]
+
+[node name="Olives" type="Node2D" node_paths=PackedStringArray("sprite", "area")]
+script = ExtResource("1_8j8tu")
+item_data = ExtResource("2_ocoja")
+sprite = NodePath("Sprite2D")
+area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_asf1t")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_d7dt5")
