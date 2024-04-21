@@ -5,8 +5,8 @@ extends Node2D
 static var instance: Game
 
 @export var hud: HUD
+@export var world: Node2D
 @export var player: Player
-
 @export var location: Location
 
 
@@ -22,10 +22,7 @@ func _input(event):
 
 func change_inventory_visibility() -> void:
 	hud.inventory.visible = !hud.inventory.visible
-	if hud.inventory.visible:
-		player.current_state = player.State.BLOCK_CONTROL
-	else:
-		player.current_state = player.State.IDLE
+	block_player_control(hud.inventory.visible)
 
 
 func to_location(path_to_scene: String, player_position: Vector2 = Vector2.ZERO) -> void:
@@ -43,3 +40,10 @@ func to_location(path_to_scene: String, player_position: Vector2 = Vector2.ZERO)
 	call_deferred("add_child", location)
 	
 	player.position = player_position
+
+
+func block_player_control(value: bool) -> void:
+	if value:
+		player.current_state = player.State.BLOCK_CONTROL
+	else:
+		player.current_state = player.State.IDLE
