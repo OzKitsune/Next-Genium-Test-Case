@@ -20,4 +20,6 @@ func apply(player: Player):
 	if result.is_empty():
 		player.global_position = random_position
 	else:
-		player.global_position = result["position"]
+		var direction = player.global_position.direction_to(result["position"])
+		random_position = result["position"] - direction
+		player.global_position = random_position
