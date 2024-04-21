@@ -2,10 +2,10 @@ class_name Location
 
 extends Node
 
+static var states: Dictionary = {}
 
-static var states: Dictionary = {
-}
-
+static var current_location: Location
+static var location_where_need_to_close_doors: String = ""
 
 @export var doors_container: Node2D
 @export var items_container: Node2D
@@ -13,6 +13,10 @@ static var states: Dictionary = {
 
 func _enter_tree():
 	load_state()
+	current_location = self
+	if location_where_need_to_close_doors != "":
+		location_where_need_to_close_doors = ""
+		close_all_doors()
 
 
 func _exit_tree():
@@ -59,6 +63,15 @@ func save_state():
 	
 	states[name] = state
 
-#
-#func close_all_doors_on_location(location_name: String):
-	#pass
+
+func close_all_doors() -> void:
+	for door_node in doors_container.get_children():
+		var door = door_node as Door
+		door.is_closed = true
+
+
+static func close_all_doors_on_location(location_name: String):
+	if current_location.name != location_name:
+		location_where_need_to_close_doors = location_name
+	else:
+		current_location.close_all_doors()
