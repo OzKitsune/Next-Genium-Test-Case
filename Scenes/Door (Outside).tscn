@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dqd37bmtn1ha"]
+[gd_scene load_steps=15 format=3 uid="uid://dqd37bmtn1ha"]
 
 [ext_resource type="Script" path="res://Code/Door.gd" id="1_ilyve"]
 [ext_resource type="Texture2D" uid="uid://b21ln67a3r4s8" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_uye7c"]
@@ -19,17 +19,9 @@ region = Rect2(48, 32, 16, 16)
 atlas = ExtResource("2_uye7c")
 region = Rect2(48, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7e5i3"]
-atlas = ExtResource("2_uye7c")
-region = Rect2(48, 16, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_exwu8"]
 atlas = ExtResource("2_uye7c")
 region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fkwcv"]
-atlas = ExtResource("2_uye7c")
-region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8qvj"]
 atlas = ExtResource("2_uye7c")
@@ -62,9 +54,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mtkcg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7e5i3")
 }],
 "loop": false,
 "name": &"closing",
@@ -79,9 +68,6 @@ animations = [{
 "speed": 1.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fkwcv")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t8qvj")
 }, {
@@ -114,7 +100,7 @@ static_body = NodePath("StaticBody2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1k0qc")
-animation = &"close"
+animation = &"closing"
 
 [node name="InteractionArea2D" type="Area2D" parent="."]
 position = Vector2(-8, -8)

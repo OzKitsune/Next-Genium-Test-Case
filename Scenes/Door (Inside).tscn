@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://2c6tw120pbga"]
+[gd_scene load_steps=15 format=3 uid="uid://2c6tw120pbga"]
 
 [ext_resource type="Script" path="res://Code/Door.gd" id="1_uxvg5"]
 [ext_resource type="Texture2D" uid="uid://b21ln67a3r4s8" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_rh0ya"]
@@ -19,17 +19,9 @@ region = Rect2(48, 32, 16, 16)
 atlas = ExtResource("2_rh0ya")
 region = Rect2(48, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7e5i3"]
-atlas = ExtResource("2_rh0ya")
-region = Rect2(48, 16, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_exwu8"]
 atlas = ExtResource("2_rh0ya")
 region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fkwcv"]
-atlas = ExtResource("2_rh0ya")
-region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8qvj"]
 atlas = ExtResource("2_rh0ya")
@@ -62,9 +54,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mtkcg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7e5i3")
 }],
 "loop": false,
 "name": &"closing",
@@ -79,9 +68,6 @@ animations = [{
 "speed": 1.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fkwcv")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t8qvj")
 }, {
@@ -105,16 +91,17 @@ size = Vector2(4, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thfh"]
 size = Vector2(16, 4)
 
-[node name="Door (Outside)" type="Node2D" node_paths=PackedStringArray("animated_sprite", "interaction_area", "static_body")]
+[node name="Door (Inside)" type="Node2D" node_paths=PackedStringArray("animated_sprite", "interaction_area", "static_body")]
 y_sort_enabled = true
 script = ExtResource("1_uxvg5")
+inside = true
 animated_sprite = NodePath("AnimatedSprite2D")
 interaction_area = NodePath("InteractionArea2D")
 static_body = NodePath("StaticBody2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1k0qc")
-animation = &"close"
+animation = &"opening"
 
 [node name="InteractionArea2D" type="Area2D" parent="."]
 position = Vector2(-8, -8)
