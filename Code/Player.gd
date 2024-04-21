@@ -102,3 +102,10 @@ func change_max_hp(value: int) -> void:
 
 func get_position_in_front() -> Vector2:
 	return position + direction_of_view * 25
+
+
+func get_hit_from_raycast() -> Dictionary:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsRayQueryParameters2D.create(global_position, global_position + direction_of_view * 15)
+	var result = space_state.intersect_ray(query)
+	return result
