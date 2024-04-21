@@ -1644,6 +1644,36 @@ position = Vector2(-48, 108)
 [node name="TeleportationPotion" parent="Items" instance=ExtResource("19_aaviy")]
 position = Vector2(-151, 56)
 
+[node name="TeleportationPotion2" parent="Items" instance=ExtResource("19_aaviy")]
+position = Vector2(-151, 82)
+
+[node name="TeleportationPotion3" parent="Items" instance=ExtResource("19_aaviy")]
+position = Vector2(-151, 112)
+
+[node name="TeleportationPotion4" parent="Items" instance=ExtResource("19_aaviy")]
+position = Vector2(282, -33)
+
+[node name="Apple4" parent="Items" instance=ExtResource("12_lk0dl")]
+position = Vector2(53, 80)
+
+[node name="Orange2" parent="Items" instance=ExtResource("18_gv5sv")]
+position = Vector2(24, 56)
+
+[node name="Orange3" parent="Items" instance=ExtResource("18_gv5sv")]
+position = Vector2(35, 41)
+
+[node name="Token2" parent="Items" instance=ExtResource("13_tm24k")]
+position = Vector2(-72, -140)
+
+[node name="Chilli4" parent="Items" instance=ExtResource("16_nsxjd")]
+position = Vector2(295, -154)
+
+[node name="Chilli5" parent="Items" instance=ExtResource("16_nsxjd")]
+position = Vector2(262, -156)
+
+[node name="Key5" parent="Items" instance=ExtResource("10_6bbmg")]
+position = Vector2(314, 115)
+
 [node name="Interactable" type="Node2D" parent="."]
 y_sort_enabled = true
 
