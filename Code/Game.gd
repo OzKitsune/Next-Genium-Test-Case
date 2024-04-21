@@ -34,10 +34,11 @@ func to_location(path_to_scene: String, player_position: Vector2 = Vector2.ZERO)
 		return
 		
 	if location != null:
+		location.save_state()
 		location.queue_free()
 	
 	location = load(path_to_scene).instantiate()
-	call_deferred("add_child", location)
+	world.call_deferred("add_child", location)
 	
 	player.position = player_position
 
