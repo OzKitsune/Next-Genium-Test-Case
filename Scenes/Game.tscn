@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://vaf73p4e7yva"]
+
+[ext_resource type="Script" path="res://Code/Game.gd" id="1_4d8gg"]
+[ext_resource type="PackedScene" uid="uid://dy5s1ihjim00i" path="res://Scenes/Locations/Street.tscn" id="1_yi3us"]
+[ext_resource type="PackedScene" uid="uid://bn6wtaw4fuicy" path="res://Scenes/HUD/HUD.tscn" id="2_gmx21"]
+[ext_resource type="PackedScene" uid="uid://crqs6nufvnq3b" path="res://Scenes/Player.tscn" id="4_815w2"]
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("hud", "player", "location")]
+y_sort_enabled = true
+script = ExtResource("1_4d8gg")
+hud = NodePath("Hud")
+player = NodePath("Player")
+location = NodePath("Street")
+
+[node name="Hud" parent="." instance=ExtResource("2_gmx21")]
+
+[node name="Street" parent="." instance=ExtResource("1_yi3us")]
+
+[node name="Player" parent="." instance=ExtResource("4_815w2")]
+position = Vector2(-63, 59)
