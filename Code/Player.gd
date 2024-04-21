@@ -85,6 +85,7 @@ func change_hp(value: int) -> void:
 		hp = max_hp
 	if hp < 0:
 		hp = 0
+	if hp == 0:
 		emit_signal("died")
 	Game.instance.hud.set_hp(hp, max_hp)
 
