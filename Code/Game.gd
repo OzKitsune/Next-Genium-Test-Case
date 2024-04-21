@@ -12,6 +12,20 @@ static var instance: Game
 
 func _ready():
 	instance = self
+	hud.inventory.item_storage_control.set_item_storage(player.inventory)
+
+
+func _input(event):
+	if event.is_action_pressed("inventory"):
+		change_inventory_visibility()
+
+
+func change_inventory_visibility() -> void:
+	hud.inventory.visible = !hud.inventory.visible
+	if hud.inventory.visible:
+		player.current_state = player.State.BLOCK_CONTROL
+	else:
+		player.current_state = player.State.IDLE
 
 
 func to_location(path_to_scene: String, player_position: Vector2 = Vector2.ZERO) -> void:
