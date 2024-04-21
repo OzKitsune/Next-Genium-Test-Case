@@ -9,6 +9,8 @@ extends CanvasLayer
 @export var message_text_label: RichTextLabel
 @export var message_player: AnimationPlayer
 
+@export var inventory: Inventory
+
 
 const HP_TEXT: String = "HP %s / %s"
 const KEYS_TEXT: String = "Ключи: %s"
