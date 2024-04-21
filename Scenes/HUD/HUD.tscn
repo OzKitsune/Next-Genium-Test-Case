@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn6wtaw4fuicy"]
+[gd_scene load_steps=7 format=3 uid="uid://bn6wtaw4fuicy"]
 
 [ext_resource type="Script" path="res://Code/HUD.gd" id="1_bsvrw"]
+[ext_resource type="PackedScene" uid="uid://2485kjqbujxt" path="res://Scenes/HUD/ItemStorageControl.tscn" id="2_7xotg"]
+[ext_resource type="Script" path="res://Code/Item/Control/Inventory.gd" id="2_86lyt"]
 
 [sub_resource type="Animation" id="Animation_d2c8s"]
 length = 0.001
@@ -39,12 +41,13 @@ _data = {
 "show": SubResource("Animation_h3kvo")
 }
 
-[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player")]
+[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player", "inventory")]
 script = ExtResource("1_bsvrw")
 hp_text_label = NodePath("Control/PlayerInfo/VBoxContainer/HPRichTextLabel")
 keys_text_label = NodePath("Control/PlayerInfo/VBoxContainer/KeysRichTextLabel")
 message_text_label = NodePath("Control/Message/MessageRichTextLabel")
 message_player = NodePath("Control/MessageAnimationPlayer")
+inventory = NodePath("Inventory")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -54,22 +57,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayerInfo" type="ColorRect" parent="Control"]
+[node name="PlayerInfo" type="PanelContainer" parent="Control"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 170.0
 offset_bottom = 60.0
-color = Color(0.233925, 0.233925, 0.233925, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerInfo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 
 [node name="HPRichTextLabel" type="RichTextLabel" parent="Control/PlayerInfo/VBoxContainer"]
 layout_mode = 2
@@ -83,7 +79,7 @@ text = "Ключи: 0"
 fit_content = true
 scroll_active = false
 
-[node name="Message" type="ColorRect" parent="Control"]
+[node name="Message" type="PanelContainer" parent="Control"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -97,15 +93,9 @@ offset_right = 250.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="MessageRichTextLabel" type="RichTextLabel" parent="Control/Message"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 bbcode_enabled = true
 text = "[center]Текст сообщения интерактивного объекта"
 fit_content = true
@@ -115,3 +105,23 @@ scroll_active = false
 libraries = {
 "": SubResource("AnimationLibrary_t7gbt")
 }
+
+[node name="Inventory" type="Control" parent="." node_paths=PackedStringArray("item_storage_control")]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_86lyt")
+item_storage_control = NodePath("ItemStorageControl")
+
+[node name="ItemStorageControl" parent="Inventory" instance=ExtResource("2_7xotg")]
+layout_mode = 1
