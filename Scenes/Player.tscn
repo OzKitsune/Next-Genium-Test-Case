@@ -129,6 +129,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gndgd"]
+radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txhok"]
 size = Vector2(16, 10)
@@ -557,17 +558,19 @@ animation = &"walk_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1s1hp"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_7ainj")
-blend_point_0/pos = Vector2(-1, 0)
+blend_point_0/pos = Vector2(-1.1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_wd2l3")
 blend_point_1/pos = Vector2(0, 1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_g7vbs")
-blend_point_2/pos = Vector2(0, -0.9)
+blend_point_2/pos = Vector2(0, -1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_kedei")
-blend_point_3/pos = Vector2(1, 0)
+blend_point_3/pos = Vector2(1.1, 0)
+min_space = Vector2(-1.1, -1)
+max_space = Vector2(1.1, 1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1xkeh"]
-graph_offset = Vector2(-1533.18, -40.34)
+graph_offset = Vector2(-1256.27, 48.9981)
 nodes/output/position = Vector2(460, 80)
 nodes/walk_bs2d/node = SubResource("AnimationNodeBlendSpace2D_1s1hp")
 nodes/walk_bs2d/position = Vector2(180, 80)
@@ -589,7 +592,6 @@ states/walk/position = Vector2(385, 210)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_5k0nk"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_ls6wu"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_61gdt")]
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("interaction_area", "animation_tree")]
-y_sort_enabled = true
 script = ExtResource("1_pydml")
 speed = 60
 interaction_area = NodePath("Area2D")
@@ -620,4 +622,5 @@ parameters/idle/idle_bs2d/blend_position = Vector2(0, 0)
 parameters/walk/walk_bs2d/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 6)
 zoom = Vector2(4, 4)
