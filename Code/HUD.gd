@@ -2,6 +2,7 @@ class_name HUD
 
 extends CanvasLayer
 
+signal confirm_window_was_closed(result: bool)
 
 @export var hp_text_label: RichTextLabel
 @export var keys_text_label: RichTextLabel
@@ -10,6 +11,8 @@ extends CanvasLayer
 @export var message_player: AnimationPlayer
 
 @export var inventory: Inventory
+
+@export var confirmation_dialog: ConfirmationDialog
 
 
 const HP_TEXT: String = "HP %s / %s"
@@ -29,3 +32,19 @@ func show_message(text: String) -> void:
 	message_text_label.text = MESSAGE_TEXT % text
 	message_player.play("RESET")
 	message_player.play("show")
+
+
+func show_confirm() -> bool:
+	Game.instance.block_player_control(true)
+	confirmation_dialog.show()
+	var result = await confirm_window_was_closed
+	Game.instance.block_player_control(false)
+	return result
+
+
+func _on_confirmation_dialog_canceled():
+	emit_signal("confirm_window_was_closed", false)
+
+
+func _on_confirmation_dialog_confirmed():
+	emit_signal("confirm_window_was_closed", true)
