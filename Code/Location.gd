@@ -7,20 +7,34 @@ static var states: Dictionary = {}
 static var current_location: Location
 static var location_where_need_to_close_doors: String = ""
 
-@export var doors_container: Node2D
-@export var items_container: Node2D
-
 
 func _enter_tree():
-	load_state()
 	current_location = self
-	if location_where_need_to_close_doors != "":
+	load_state()
+	if location_where_need_to_close_doors == name:
 		location_where_need_to_close_doors = ""
 		close_all_doors()
 
 
-func _exit_tree():
-	save_state()
+func save_state() -> void:
+	## Информация о предметах.
+	var items = find_children("*", "SceneItem", true, false)
+	var items_info: Array = []
+	for item: SceneItem in items:
+		items_info.append([item.item_data, item.position])
+	
+	## Информация о дверях.
+	var doors = find_children("*", "Door", true, false)
+	var doors_info: Array = []
+	for door: Door in doors:
+		doors_info.append(door.is_closed) 
+	
+	var state: Dictionary = {
+		"Items" : items_info,
+		"Doors" : doors_info,
+	}
+	
+	states[name] = state
 
 
 func load_state():
@@ -29,44 +43,24 @@ func load_state():
 		
 	var state = states[name]
 	
-	if doors_container != null:
-		for door_node in doors_container.get_children():
-			var door = door_node as Door
-			door.is_closed = state["Doors"][door.get_index()]
+	var items = find_children("*", "SceneItem")
+	for item in items:
+		item.queue_free()
 	
-	if items_container != null:
-		for index in range(items_container.get_child_count() - 1, -1, -1):
-			var item = items_container.get_child(index) as SceneItem
-			if not state["Items"].has(index):
-				item.queue_free()
-
-
-func save_state():
-	## Словарь с информацией о дверях.
-	var doors_info: Dictionary = {}
-	if doors_container != null:
-		for door_node in doors_container.get_children():
-			var door = door_node as Door
-			doors_info[door.get_index()] = door.is_closed
+	for item_info: Array in state["Items"]:
+		var item_data: ItemData = item_info[0]
+		var position: Vector2 = item_info[1]
+		var item = item_data.create_item()
+		item.drop(self, position)
 	
-	## Массив индексов предметов, которые остались на сцене.
-	var items_info: Array = []
-	if items_container != null:
-		for item_node in items_container.get_children():
-			var item = item_node as SceneItem
-			items_info.append(item.start_index)
-	
-	var state: Dictionary = {
-		"Doors" : doors_info,
-		"Items" : items_info,
-	}
-	
-	states[name] = state
+	var doors = find_children("*", "Door")
+	for index in doors.size():
+		doors[index].is_closed = state["Doors"][index]
 
 
 func close_all_doors() -> void:
-	for door_node in doors_container.get_children():
-		var door = door_node as Door
+	var doors = find_children("*", "Door")
+	for door: Door in doors:
 		door.is_closed = true
 
 
