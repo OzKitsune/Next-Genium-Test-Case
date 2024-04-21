@@ -7,9 +7,13 @@ extends Resource
 @export_multiline var description: String
 ## Будет ли предмет добавляться в инвентарь.
 @export var collectable: bool = true
+## Можно ли предмет использовать
+@export var usable: bool = true
 ## Будет ли расходоваться предмет при использовании.
 @export var consumable: bool = true
 @export var image: Texture2D
+
+var path_to_scene: String
 
 
 func create_item() -> Item:
