@@ -6,5 +6,5 @@ class_name Token
 extends Item
 
 
-func apply(player: Player):
+func apply(_player: Player):
 	return
