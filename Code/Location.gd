@@ -2,6 +2,10 @@ class_name Location
 
 extends Node
 
+enum Type { STREET, HOUSE}
+
+@export var type: Type
+
 static var states: Dictionary = {}
 
 static var current_location: Location
@@ -27,7 +31,7 @@ func save_state() -> void:
 	var doors = find_children("*", "Door", true, false)
 	var doors_info: Array = []
 	for door: Door in doors:
-		doors_info.append(door.is_closed) 
+		doors_info.append([door.closed, door.can_opened_with_key]) 
 	
 	var state: Dictionary = {
 		"Items" : items_info,
@@ -55,13 +59,15 @@ func load_state():
 	
 	var doors = find_children("*", "Door")
 	for index in doors.size():
-		doors[index].is_closed = state["Doors"][index]
+		var is_closed = state["Doors"][index][0]
+		var can_opened = state["Doors"][index][1]
+		(doors[index] as Door).set_door_status(is_closed, can_opened)
 
 
 func close_all_doors() -> void:
 	var doors = find_children("*", "Door")
 	for door: Door in doors:
-		door.is_closed = true
+		door.closed = true
 
 
 static func close_all_doors_on_location(location_name: String):
@@ -69,3 +75,9 @@ static func close_all_doors_on_location(location_name: String):
 		location_where_need_to_close_doors = location_name
 	else:
 		current_location.close_all_doors()
+
+
+static func clear_states() -> void:
+	states = {}
+	current_location = null
+	location_where_need_to_close_doors = ""
