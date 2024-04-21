@@ -14,7 +14,7 @@ func _ready():
 
 func _input(event):
 	if player_inside and event.is_action_pressed("action"):
-		Globals.hud.show_message(message)
+		Game.instance.hud.show_message(message)
 
 
 func _on_area_2d_body_entered(body):
