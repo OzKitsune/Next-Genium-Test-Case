@@ -92,7 +92,7 @@ func change_hp(value: int) -> void:
 ## Изменить максимальное здоровье на указанное значение.
 func change_max_hp(value: int) -> void:
 	max_hp += value
-	if max_hp == 0:
+	if max_hp < 1:
 		max_hp = 1
 	if hp > max_hp:
 		hp = max_hp
