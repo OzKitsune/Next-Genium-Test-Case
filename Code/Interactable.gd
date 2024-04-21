@@ -17,7 +17,7 @@ func _input(event):
 	if player_inside and event.is_action_pressed("action"):
 		## Проверка, что на пути к объекту нет физических препятсвий.
 		var result = Game.instance.player.get_hit_from_raycast()
-		if result.is_empty() or result["collider"] != body2D:
+		if not result.is_empty() and result["collider"] != body2D:
 			return
 		Game.instance.hud.show_message(message)
 
