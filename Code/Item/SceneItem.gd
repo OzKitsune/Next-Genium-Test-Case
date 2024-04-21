@@ -19,6 +19,7 @@ func _ready():
 	item_data.path_to_scene = scene_file_path
 
 
+## Подобрать предмет игроком.
 func collect(body: Node2D) -> void:
 	if body is Player:
 		var player = body as Player
