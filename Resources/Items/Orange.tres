@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://dlofx5no813wd"]
 
-[ext_resource type="Texture2D" uid="uid://c34apwny0qqe1" path="res://2D/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_4t7ql"]
+[ext_resource type="Texture2D" uid="uid://c34apwny0qqe1" path="res://2D/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_5mcol"]
 [ext_resource type="Script" path="res://Code/Item/List/Orange.gd" id="2_w8r8m"]
 [ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_cecc0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjbmj"]
-atlas = ExtResource("1_4t7ql")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5livb"]
+atlas = ExtResource("1_5mcol")
 region = Rect2(32, 544, 32, 32)
 
 [resource]
@@ -16,4 +16,4 @@ description = "Увеличивает максимальное здоровье 
 collectable = true
 usable = true
 consumable = true
-image = SubResource("AtlasTexture_vjbmj")
+image = SubResource("AtlasTexture_5livb")
