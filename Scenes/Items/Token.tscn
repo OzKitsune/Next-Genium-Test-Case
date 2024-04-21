@@ -6,7 +6,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7dt5"]
 
-[node name="Apple" type="Node2D" node_paths=PackedStringArray("sprite", "area")]
+[node name="Token" type="Node2D" node_paths=PackedStringArray("sprite", "area")]
 script = ExtResource("1_ei1rf")
 item_data = ExtResource("2_micxq")
 sprite = NodePath("Sprite2D")
