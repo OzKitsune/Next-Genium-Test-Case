@@ -79,6 +79,7 @@ func use_key() -> bool:
 	return true
 
 
+## Изменить здоровье на указанное значение.
 func change_hp(value: int) -> void:
 	hp += value
 	if hp > max_hp:
@@ -100,10 +101,12 @@ func change_max_hp(value: int) -> void:
 	Game.instance.hud.set_hp(hp, max_hp)
 
 
+## Получить позицию недалеко от персонажа по направлению взгляда.
 func get_position_in_front() -> Vector2:
 	return position + direction_of_view * 25
 
 
+## Запустить raycast по направлению взгляда персонажа.
 func get_hit_from_raycast() -> Dictionary:
 	var space_state = get_world_2d().direct_space_state
 	var query = PhysicsRayQueryParameters2D.create(global_position, global_position + direction_of_view * 15)
