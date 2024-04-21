@@ -22,6 +22,7 @@ func set_item(item: Item) -> void:
 		button.texture_normal = default_texture;
 	else:
 		button.texture_normal = item_data.image
+		button.tooltip_text = item_data.name
 
 
 func select() -> void:
