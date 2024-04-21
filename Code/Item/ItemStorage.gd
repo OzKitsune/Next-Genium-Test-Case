@@ -6,9 +6,12 @@ class_name ItemStorage
 
 extends Object
 
+signal item_added()
+signal item_removed()
+signal size_changed()
 
 var number_of_slots: int
-var items: Array = []
+var items: Array[Item] = []
 
 
 func _init(slots: int):
@@ -26,8 +29,8 @@ func add_item(item: ItemData) -> bool:
 	if index == -1: ## Если в массиве нет null, значит все ячейки заняты.
 		return false
 	
-	items[index] = item.item_script.new()
-	print("Добавлен новый предмет: " + str(item.title))
+	items[index] = item.create_item()
+	emit_signal("item_added")
 	return true
 
 
@@ -35,4 +38,5 @@ func add_item(item: ItemData) -> bool:
 func extract_item(slot_index: int) -> Item:
 	var item =  items.pop_at(slot_index)
 	items.resize(number_of_slots)
+	emit_signal("item_removed")
 	return item
