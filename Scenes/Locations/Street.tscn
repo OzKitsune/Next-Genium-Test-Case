@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dy5s1ihjim00i"]
+[gd_scene load_steps=32 format=3 uid="uid://dy5s1ihjim00i"]
 
 [ext_resource type="Script" path="res://Code/Location.gd" id="1_3417h"]
 [ext_resource type="Texture2D" uid="uid://fti78p5v8p5" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_ke5ed"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bpbb7duf7cbcf" path="res://Scenes/Items/Orange.tscn" id="18_gv5sv"]
 [ext_resource type="PackedScene" uid="uid://q3hsutcwchad" path="res://Scenes/Interactable Objects/Tree.tscn" id="18_qhjfe"]
 [ext_resource type="PackedScene" uid="uid://b6wjhope2i67l" path="res://Scenes/Items/TeleportationPotion.tscn" id="19_aaviy"]
+[ext_resource type="PackedScene" uid="uid://c2m5tkc2tsqxx" path="res://Scenes/Interactable Objects/Sunflower.tscn" id="23_rkriy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4xnq"]
 texture = ExtResource("2_ke5ed")
@@ -1685,6 +1686,36 @@ position = Vector2(39, -30)
 
 [node name="Tree" parent="Interactable" instance=ExtResource("18_qhjfe")]
 position = Vector2(-125, -210)
+
+[node name="Tree2" parent="Interactable" instance=ExtResource("18_qhjfe")]
+position = Vector2(-309, -142)
+
+[node name="Tree3" parent="Interactable" instance=ExtResource("18_qhjfe")]
+position = Vector2(-300, -216)
+
+[node name="Tree4" parent="Interactable" instance=ExtResource("18_qhjfe")]
+position = Vector2(-270, -219)
+
+[node name="Tree5" parent="Interactable" instance=ExtResource("18_qhjfe")]
+position = Vector2(-309, -180)
+
+[node name="Tree6" parent="Interactable" instance=ExtResource("18_qhjfe")]
+position = Vector2(-241, -221)
+
+[node name="Stone2" parent="Interactable" instance=ExtResource("9_xlne5")]
+position = Vector2(-151, 15)
+
+[node name="Stone3" parent="Interactable" instance=ExtResource("9_xlne5")]
+position = Vector2(175, -17)
+
+[node name="Sunflower" parent="Interactable" instance=ExtResource("23_rkriy")]
+position = Vector2(-150, -44)
+
+[node name="Sunflower2" parent="Interactable" instance=ExtResource("23_rkriy")]
+position = Vector2(-234, 60)
+
+[node name="Sunflower3" parent="Interactable" instance=ExtResource("23_rkriy")]
+position = Vector2(147, 104)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

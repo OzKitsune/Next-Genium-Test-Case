@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7ivs237so0e1"]
+[gd_scene load_steps=11 format=3 uid="uid://c7ivs237so0e1"]
 
 [ext_resource type="Script" path="res://Code/Location.gd" id="1_j1b1t"]
 [ext_resource type="Texture2D" uid="uid://b21ln67a3r4s8" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_voaed"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://2c6tw120pbga" path="res://Scenes/Door (Inside).tscn" id="4_ni4xd"]
 [ext_resource type="PackedScene" uid="uid://b0kvlkhp6p8v" path="res://Scenes/Items/AlarmPotion.tscn" id="5_eqwrg"]
 [ext_resource type="PackedScene" uid="uid://bpbb7duf7cbcf" path="res://Scenes/Items/Orange.tscn" id="6_rytvc"]
+[ext_resource type="PackedScene" uid="uid://d4h6xy5d86jg5" path="res://Scenes/Interactable Objects/Seeds.tscn" id="7_iqrrf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8l0vn"]
 texture = ExtResource("2_voaed")
@@ -362,3 +363,9 @@ position = Vector2(33, 15)
 
 [node name="Orange2" parent="Items" instance=ExtResource("6_rytvc")]
 position = Vector2(35, 2)
+
+[node name="Interactable" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Seeds" parent="Interactable" instance=ExtResource("7_iqrrf")]
+position = Vector2(0, -25)
