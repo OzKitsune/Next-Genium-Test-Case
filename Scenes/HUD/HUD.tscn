@@ -41,13 +41,14 @@ _data = {
 "show": SubResource("Animation_h3kvo")
 }
 
-[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player", "inventory")]
+[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player", "inventory", "confirmation_dialog")]
 script = ExtResource("1_bsvrw")
 hp_text_label = NodePath("Control/PlayerInfo/VBoxContainer/HPRichTextLabel")
 keys_text_label = NodePath("Control/PlayerInfo/VBoxContainer/KeysRichTextLabel")
 message_text_label = NodePath("Control/Message/MessageRichTextLabel")
 message_player = NodePath("Control/MessageAnimationPlayer")
 inventory = NodePath("Inventory")
+confirmation_dialog = NodePath("ConfirmationDialog")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -125,3 +126,14 @@ item_storage_control = NodePath("ItemStorageControl")
 
 [node name="ItemStorageControl" parent="Inventory" instance=ExtResource("2_7xotg")]
 layout_mode = 1
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+title = "Подтвердите действие"
+initial_position = 2
+size = Vector2i(394, 90)
+ok_button_text = "Да"
+dialog_text = "Вы хотите потратить 1 ключ и открыть дверь?"
+cancel_button_text = "Нет"
+
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]
