@@ -14,9 +14,10 @@ var start_index: int
 
 func _ready():
 	sprite.texture = item_data.image
-	start_index = get_index()
-	area.body_entered.connect(collect)
-	item_data.path_to_scene = scene_file_path
+	if not Engine.is_editor_hint():
+		start_index = get_index()
+		area.body_entered.connect(collect)
+		item_data.path_to_scene = scene_file_path
 
 
 ## Подобрать предмет игроком.
