@@ -13,10 +13,11 @@ size = Vector2(10, 5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw2cf"]
 size = Vector2(14, 10)
 
-[node name="Stone" type="Node2D" node_paths=PackedStringArray("sprite")]
+[node name="Stone" type="Node2D" node_paths=PackedStringArray("sprite", "body2D")]
 script = ExtResource("1_n8xe5")
 message = "Обычный камень"
 sprite = NodePath("Sprite2D")
+body2D = NodePath("StaticBody2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
