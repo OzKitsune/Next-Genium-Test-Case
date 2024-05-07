@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpbb7duf7cbcf"]
 
-[ext_resource type="Script" path="res://code/item/scene_item.gd" id="1_dfoer"]
-[ext_resource type="Resource" uid="uid://dlofx5no813wd" path="res://resources/items/orange.tres" id="2_nk2ro"]
+[ext_resource type="Script" path="res://Code/Item/SceneItem.gd" id="1_dfoer"]
+[ext_resource type="Resource" uid="uid://dlofx5no813wd" path="res://Resources/Items/Orange.tres" id="2_nk2ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7dt5"]
 

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bjnrhaumlivrg"]
 
-[ext_resource type="Texture2D" uid="uid://drhyuqkonig3s" path="res://2d/amulet_32.png" id="1_sbqlo"]
-[ext_resource type="Script" path="res://code/item/list/amulet.gd" id="2_m3yqo"]
-[ext_resource type="Script" path="res://code/item/item_data.gd" id="3_vqqxy"]
+[ext_resource type="Texture2D" uid="uid://drhyuqkonig3s" path="res://2D/Amulet32.png" id="1_sbqlo"]
+[ext_resource type="Script" path="res://Code/Item/List/Amulet.gd" id="2_m3yqo"]
+[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_vqqxy"]
 
 [resource]
 script = ExtResource("3_vqqxy")

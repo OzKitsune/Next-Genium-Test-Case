@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://2485kjqbujxt"]
+
+[ext_resource type="Script" path="res://Code/Item/Control/ItemStorageControl.gd" id="1_y6n0c"]
+[ext_resource type="PackedScene" uid="uid://tyqi3urptbpy" path="res://Scenes/HUD/ItemStorageControlItem.tscn" id="2_ddjl6"]
+
+[node name="ItemStorageControl" type="Control" node_paths=PackedStringArray("items_container", "buttons_container", "item_name_text_label", "item_desc_text_label")]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 3
+anchor_right = 0.694
+anchor_bottom = 0.772
+offset_right = 0.511963
+offset_bottom = -0.256012
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6n0c")
+items_container = NodePath("ItemsScrollContainer/ItemsGridContainer")
+buttons_container = NodePath("ButtonsScrollContainer/ButtonsContainer")
+item_name_text_label = NodePath("NamePanelContainer/RichTextLabel")
+item_desc_text_label = NodePath("DescriptionPanelContainer/RichTextLabel")
+inventory_item_prefab = ExtResource("2_ddjl6")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.235294, 0.235294, 0.235294, 0.823529)
+
+[node name="ItemsScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -230.0
+offset_right = 380.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="ItemsGridContainer" type="GridContainer" parent="ItemsScrollContainer"]
+layout_mode = 2
+columns = 9
+
+[node name="InventoryItem" parent="ItemsScrollContainer/ItemsGridContainer" instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+
+[node name="InventoryItem2" parent="ItemsScrollContainer/ItemsGridContainer" instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+
+[node name="InventoryItem3" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem/ColorRect")
+button = NodePath("../InventoryItem/TextureButton")
+
+[node name="InventoryItem4" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem2/ColorRect")
+button = NodePath("../InventoryItem2/TextureButton")
+
+[node name="InventoryItem5" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem/ColorRect")
+button = NodePath("../InventoryItem/TextureButton")
+
+[node name="InventoryItem6" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem2/ColorRect")
+button = NodePath("../InventoryItem2/TextureButton")
+
+[node name="InventoryItem7" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem/ColorRect")
+button = NodePath("../InventoryItem/TextureButton")
+
+[node name="InventoryItem8" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem2/ColorRect")
+button = NodePath("../InventoryItem2/TextureButton")
+
+[node name="InventoryItem9" parent="ItemsScrollContainer/ItemsGridContainer" node_paths=PackedStringArray("background", "button") instance=ExtResource("2_ddjl6")]
+layout_mode = 2
+background = NodePath("../InventoryItem/ColorRect")
+button = NodePath("../InventoryItem/TextureButton")
+
+[node name="NamePanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -200.0
+offset_right = -420.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NamePanelContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 10.86
+bbcode_enabled = true
+text = "Название предмета"
+scroll_active = false
+
+[node name="DescriptionPanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -150.0
+offset_right = -420.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DescriptionPanelContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Описание предмета"
+scroll_active = false
+
+[node name="ButtonsScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 300.0
+offset_right = 780.0
+offset_bottom = 470.0
+horizontal_scroll_mode = 0
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="ButtonsScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

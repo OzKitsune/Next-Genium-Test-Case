@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://dlofx5no813wd"]
 
-[ext_resource type="Texture2D" uid="uid://c34apwny0qqe1" path="res://2d/mega_pixelart32x32px.png" id="1_5mcol"]
-[ext_resource type="Script" path="res://code/item/list/orange.gd" id="2_w8r8m"]
-[ext_resource type="Script" path="res://code/item/item_data.gd" id="3_cecc0"]
+[ext_resource type="Texture2D" uid="uid://c34apwny0qqe1" path="res://2D/MegaPixelArt32x32pxIcons_SpriteSheet.png" id="1_5mcol"]
+[ext_resource type="Script" path="res://Code/Item/List/Orange.gd" id="2_w8r8m"]
+[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_cecc0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5livb"]
 atlas = ExtResource("1_5mcol")
