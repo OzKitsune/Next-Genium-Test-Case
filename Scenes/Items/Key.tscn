@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://xem6qdds8tl7"]
 
-[ext_resource type="Script" path="res://Code/Item/SceneItem.gd" id="1_wfkmy"]
-[ext_resource type="Resource" uid="uid://bxu0wpqkh6en7" path="res://Resources/Items/Key.tres" id="2_ie5w6"]
-[ext_resource type="Texture2D" uid="uid://b206yop52hanb" path="res://2D/Pixel Art Icon Pack/Misc/Golden Key.png" id="3_gni1r"]
+[ext_resource type="Script" path="res://code/item/scene_item.gd" id="1_wfkmy"]
+[ext_resource type="Resource" uid="uid://bxu0wpqkh6en7" path="res://resources/items/key.tres" id="2_ie5w6"]
+[ext_resource type="Texture2D" uid="uid://b206yop52hanb" path="res://2d/pixel_art_icon_pack/key.png" id="3_gni1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7dt5"]
 

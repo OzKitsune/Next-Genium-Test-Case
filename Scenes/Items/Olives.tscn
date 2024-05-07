@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvfv76ug1rmnc"]
 
-[ext_resource type="Script" path="res://Code/Item/SceneItem.gd" id="1_8j8tu"]
-[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2D/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="1_inknn"]
-[ext_resource type="Resource" uid="uid://bvxof6rgjgejp" path="res://Resources/Items/Olives.tres" id="2_ocoja"]
+[ext_resource type="Script" path="res://code/item/scene_item.gd" id="1_8j8tu"]
+[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2d/sprout_lands/objects/basic_grass_biom_things.png" id="1_inknn"]
+[ext_resource type="Resource" uid="uid://bvxof6rgjgejp" path="res://resources/items/olives.tres" id="2_ocoja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_asf1t"]
 atlas = ExtResource("1_inknn")

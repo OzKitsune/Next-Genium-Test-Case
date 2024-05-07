@@ -1,31 +1,31 @@
 [gd_scene load_steps=32 format=3 uid="uid://dy5s1ihjim00i"]
 
-[ext_resource type="Script" path="res://Code/Location.gd" id="1_3417h"]
-[ext_resource type="Texture2D" uid="uid://fti78p5v8p5" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_ke5ed"]
-[ext_resource type="Texture2D" uid="uid://xd4uib8l2vwr" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="3_88gv8"]
-[ext_resource type="Texture2D" uid="uid://dxqnwspw3qqjt" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="3_ual6n"]
-[ext_resource type="Texture2D" uid="uid://b0qvc2voxua1i" path="res://2D/Sprout Lands - Sprites - Basic pack/Objects/Paths.png" id="5_3a8n5"]
-[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2D/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="5_mha0n"]
-[ext_resource type="Texture2D" uid="uid://b3lhpvd76tjr3" path="res://2D/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt.png" id="6_yh0jm"]
-[ext_resource type="PackedScene" uid="uid://dlsactwv8ag6a" path="res://Scenes/Locations/Houses/House 01 (outside).tscn" id="7_j7p6f"]
-[ext_resource type="PackedScene" uid="uid://b1120r2703ai1" path="res://Scenes/Interactable Objects/FallenTree.tscn" id="8_pkbu3"]
-[ext_resource type="PackedScene" uid="uid://dikyd2yxjx1or" path="res://Scenes/Locations/Houses/House 02 (outside).tscn" id="9_lnhrb"]
-[ext_resource type="PackedScene" uid="uid://dg8gaqcw48w36" path="res://Scenes/Interactable Objects/Stone.tscn" id="9_xlne5"]
-[ext_resource type="PackedScene" uid="uid://xem6qdds8tl7" path="res://Scenes/Items/Key.tscn" id="10_6bbmg"]
-[ext_resource type="PackedScene" uid="uid://c6hp6nubp6s7n" path="res://Scenes/Locations/Houses/House 03 (outside).tscn" id="10_hb8dh"]
-[ext_resource type="PackedScene" uid="uid://bdsaehe708syy" path="res://Scenes/Locations/Houses/House 04 (outside).tscn" id="11_8752m"]
-[ext_resource type="PackedScene" uid="uid://t3rywuvyi1na" path="res://Scenes/Items/Apple.tscn" id="12_lk0dl"]
-[ext_resource type="PackedScene" uid="uid://bipar5d4cmepo" path="res://Scenes/Items/Token.tscn" id="13_tm24k"]
-[ext_resource type="PackedScene" uid="uid://dask7ues3vsmp" path="res://Scenes/Items/Amulet.tscn" id="15_p8ssb"]
-[ext_resource type="PackedScene" uid="uid://du67odncqotol" path="res://Scenes/Items/Chilli.tscn" id="16_nsxjd"]
-[ext_resource type="PackedScene" uid="uid://dvfv76ug1rmnc" path="res://Scenes/Items/Olives.tscn" id="17_d66gq"]
-[ext_resource type="PackedScene" uid="uid://bpbb7duf7cbcf" path="res://Scenes/Items/Orange.tscn" id="18_gv5sv"]
-[ext_resource type="PackedScene" uid="uid://q3hsutcwchad" path="res://Scenes/Interactable Objects/Tree.tscn" id="18_qhjfe"]
-[ext_resource type="PackedScene" uid="uid://b6wjhope2i67l" path="res://Scenes/Items/TeleportationPotion.tscn" id="19_aaviy"]
-[ext_resource type="PackedScene" uid="uid://c2m5tkc2tsqxx" path="res://Scenes/Interactable Objects/Sunflower.tscn" id="23_rkriy"]
+[ext_resource type="Script" path="res://code/location.gd" id="1_n044r"]
+[ext_resource type="Texture2D" uid="uid://fti78p5v8p5" path="res://2d/sprout_lands/tilesets/grass.png" id="2_vkm5v"]
+[ext_resource type="Texture2D" uid="uid://xd4uib8l2vwr" path="res://2d/sprout_lands/tilesets/water.png" id="3_2rdtj"]
+[ext_resource type="Texture2D" uid="uid://dxqnwspw3qqjt" path="res://2d/sprout_lands/tilesets/fences.png" id="4_etd2d"]
+[ext_resource type="Texture2D" uid="uid://b0qvc2voxua1i" path="res://2d/sprout_lands/objects/paths.png" id="5_jvbwr"]
+[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2d/sprout_lands/objects/basic_grass_biom_things.png" id="6_7qvs1"]
+[ext_resource type="Texture2D" uid="uid://b3lhpvd76tjr3" path="res://2d/sprout_lands/tilesets/dirt.png" id="7_6tnqb"]
+[ext_resource type="PackedScene" uid="uid://dlsactwv8ag6a" path="res://scenes/locations/houses/house_01_outside.tscn" id="8_d7cac"]
+[ext_resource type="PackedScene" uid="uid://dikyd2yxjx1or" path="res://scenes/locations/houses/house_02_outside.tscn" id="9_y51mw"]
+[ext_resource type="PackedScene" uid="uid://c6hp6nubp6s7n" path="res://scenes/locations/houses/house_03_outside.tscn" id="10_0tjmn"]
+[ext_resource type="PackedScene" uid="uid://bdsaehe708syy" path="res://scenes/locations/houses/house_04_outside.tscn" id="11_3hagf"]
+[ext_resource type="PackedScene" uid="uid://xem6qdds8tl7" path="res://scenes/items/key.tscn" id="12_m5yrj"]
+[ext_resource type="PackedScene" uid="uid://du67odncqotol" path="res://scenes/items/chilli.tscn" id="13_np6cm"]
+[ext_resource type="PackedScene" uid="uid://bpbb7duf7cbcf" path="res://scenes/items/orange.tscn" id="14_8kn78"]
+[ext_resource type="PackedScene" uid="uid://dvfv76ug1rmnc" path="res://scenes/items/olives.tscn" id="15_sjv0j"]
+[ext_resource type="PackedScene" uid="uid://t3rywuvyi1na" path="res://scenes/items/apple.tscn" id="16_wc066"]
+[ext_resource type="PackedScene" uid="uid://bipar5d4cmepo" path="res://scenes/items/token.tscn" id="17_0m8q7"]
+[ext_resource type="PackedScene" uid="uid://dask7ues3vsmp" path="res://scenes/items/amulet.tscn" id="18_6mmvw"]
+[ext_resource type="PackedScene" uid="uid://b6wjhope2i67l" path="res://scenes/items/teleportation_potion.tscn" id="19_8qkqn"]
+[ext_resource type="PackedScene" uid="uid://dg8gaqcw48w36" path="res://scenes/interactable_objects/stone.tscn" id="20_w3l6u"]
+[ext_resource type="PackedScene" uid="uid://b1120r2703ai1" path="res://scenes/interactable_objects/fallen_tree.tscn" id="21_jxpa3"]
+[ext_resource type="PackedScene" uid="uid://q3hsutcwchad" path="res://scenes/interactable_objects/tree.tscn" id="22_vkx1c"]
+[ext_resource type="PackedScene" uid="uid://c2m5tkc2tsqxx" path="res://scenes/interactable_objects/sunflower.tscn" id="23_0s38e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4xnq"]
-texture = ExtResource("2_ke5ed")
+texture = ExtResource("2_vkm5v")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -665,7 +665,7 @@ texture = ExtResource("2_ke5ed")
 2:2/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j0lr3"]
-texture = ExtResource("3_88gv8")
+texture = ExtResource("3_2rdtj")
 0:0/animation_columns = 4
 0:0/animation_speed = 4.0
 0:0/animation_mode = 1
@@ -678,7 +678,7 @@ texture = ExtResource("3_88gv8")
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7q5dl"]
-texture = ExtResource("3_ual6n")
+texture = ExtResource("4_etd2d")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 1
@@ -809,7 +809,7 @@ texture = ExtResource("3_ual6n")
 3:3/0/terrains_peering_bit/left_side = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1o10i"]
-texture = ExtResource("5_3a8n5")
+texture = ExtResource("5_jvbwr")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -842,7 +842,7 @@ texture = ExtResource("5_3a8n5")
 3:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cy0t"]
-texture = ExtResource("5_mha0n")
+texture = ExtResource("6_7qvs1")
 0:0/size_in_atlas = Vector2i(1, 2)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -953,7 +953,7 @@ texture = ExtResource("5_mha0n")
 0:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gaiq"]
-texture = ExtResource("6_yh0jm")
+texture = ExtResource("7_6tnqb")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 2
@@ -1548,7 +1548,7 @@ size = Vector2(114, 20)
 
 [node name="Street" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_3417h")
+script = ExtResource("1_n044r")
 
 [node name="Terrain" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1580,141 +1580,141 @@ layer_5/tile_data = PackedInt32Array()
 [node name="Houses" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="House01" parent="Houses" instance=ExtResource("7_j7p6f")]
+[node name="House01" parent="Houses" instance=ExtResource("8_d7cac")]
 position = Vector2(-16, -152)
 
-[node name="House02" parent="Houses" instance=ExtResource("9_lnhrb")]
+[node name="House02" parent="Houses" instance=ExtResource("9_y51mw")]
 position = Vector2(143, -155)
 
-[node name="House 03" parent="Houses" instance=ExtResource("10_hb8dh")]
+[node name="House 03" parent="Houses" instance=ExtResource("10_0tjmn")]
 position = Vector2(-208, -70)
 
-[node name="House 04" parent="Houses" instance=ExtResource("11_8752m")]
+[node name="House 04" parent="Houses" instance=ExtResource("11_3hagf")]
 position = Vector2(236, 6)
 
 [node name="Items" type="Node2D" parent="."]
 
-[node name="Key" parent="Items" instance=ExtResource("10_6bbmg")]
+[node name="Key" parent="Items" instance=ExtResource("12_m5yrj")]
 position = Vector2(22, -108)
 
-[node name="Chilli" parent="Items" instance=ExtResource("16_nsxjd")]
+[node name="Chilli" parent="Items" instance=ExtResource("13_np6cm")]
 position = Vector2(295, -184)
 
-[node name="Chilli2" parent="Items" instance=ExtResource("16_nsxjd")]
+[node name="Chilli2" parent="Items" instance=ExtResource("13_np6cm")]
 position = Vector2(270, -184)
 
-[node name="Chilli3" parent="Items" instance=ExtResource("16_nsxjd")]
+[node name="Chilli3" parent="Items" instance=ExtResource("13_np6cm")]
 position = Vector2(244, -184)
 
-[node name="Orange" parent="Items" instance=ExtResource("18_gv5sv")]
+[node name="Orange" parent="Items" instance=ExtResource("14_8kn78")]
 position = Vector2(129, -112)
 
-[node name="Key2" parent="Items" instance=ExtResource("10_6bbmg")]
+[node name="Key2" parent="Items" instance=ExtResource("12_m5yrj")]
 position = Vector2(55, -206)
 
-[node name="Olives" parent="Items" instance=ExtResource("17_d66gq")]
+[node name="Olives" parent="Items" instance=ExtResource("15_sjv0j")]
 position = Vector2(-262, -183)
 
-[node name="Olives2" parent="Items" instance=ExtResource("17_d66gq")]
+[node name="Olives2" parent="Items" instance=ExtResource("15_sjv0j")]
 position = Vector2(-249, -158)
 
-[node name="Olives3" parent="Items" instance=ExtResource("17_d66gq")]
+[node name="Olives3" parent="Items" instance=ExtResource("15_sjv0j")]
 position = Vector2(-234, -183)
 
-[node name="Apple" parent="Items" instance=ExtResource("12_lk0dl")]
+[node name="Apple" parent="Items" instance=ExtResource("16_wc066")]
 position = Vector2(-154, -182)
 
-[node name="Apple2" parent="Items" instance=ExtResource("12_lk0dl")]
+[node name="Apple2" parent="Items" instance=ExtResource("16_wc066")]
 position = Vector2(-170, -156)
 
-[node name="Apple3" parent="Items" instance=ExtResource("12_lk0dl")]
+[node name="Apple3" parent="Items" instance=ExtResource("16_wc066")]
 position = Vector2(-185, -183)
 
-[node name="Key3" parent="Items" instance=ExtResource("10_6bbmg")]
+[node name="Key3" parent="Items" instance=ExtResource("12_m5yrj")]
 position = Vector2(-209, -161)
 
-[node name="Token" parent="Items" instance=ExtResource("13_tm24k")]
+[node name="Token" parent="Items" instance=ExtResource("17_0m8q7")]
 position = Vector2(-264, -74)
 
-[node name="Amulet" parent="Items" instance=ExtResource("15_p8ssb")]
+[node name="Amulet" parent="Items" instance=ExtResource("18_6mmvw")]
 position = Vector2(305, 71)
 
-[node name="Key4" parent="Items" instance=ExtResource("10_6bbmg")]
+[node name="Key4" parent="Items" instance=ExtResource("12_m5yrj")]
 position = Vector2(-48, 108)
 
-[node name="TeleportationPotion" parent="Items" instance=ExtResource("19_aaviy")]
+[node name="TeleportationPotion" parent="Items" instance=ExtResource("19_8qkqn")]
 position = Vector2(-151, 56)
 
-[node name="TeleportationPotion2" parent="Items" instance=ExtResource("19_aaviy")]
+[node name="TeleportationPotion2" parent="Items" instance=ExtResource("19_8qkqn")]
 position = Vector2(-151, 82)
 
-[node name="TeleportationPotion3" parent="Items" instance=ExtResource("19_aaviy")]
+[node name="TeleportationPotion3" parent="Items" instance=ExtResource("19_8qkqn")]
 position = Vector2(-151, 112)
 
-[node name="TeleportationPotion4" parent="Items" instance=ExtResource("19_aaviy")]
+[node name="TeleportationPotion4" parent="Items" instance=ExtResource("19_8qkqn")]
 position = Vector2(282, -33)
 
-[node name="Apple4" parent="Items" instance=ExtResource("12_lk0dl")]
+[node name="Apple4" parent="Items" instance=ExtResource("16_wc066")]
 position = Vector2(53, 80)
 
-[node name="Orange2" parent="Items" instance=ExtResource("18_gv5sv")]
+[node name="Orange2" parent="Items" instance=ExtResource("14_8kn78")]
 position = Vector2(24, 56)
 
-[node name="Orange3" parent="Items" instance=ExtResource("18_gv5sv")]
+[node name="Orange3" parent="Items" instance=ExtResource("14_8kn78")]
 position = Vector2(35, 41)
 
-[node name="Token2" parent="Items" instance=ExtResource("13_tm24k")]
+[node name="Token2" parent="Items" instance=ExtResource("17_0m8q7")]
 position = Vector2(-72, -140)
 
-[node name="Chilli4" parent="Items" instance=ExtResource("16_nsxjd")]
+[node name="Chilli4" parent="Items" instance=ExtResource("13_np6cm")]
 position = Vector2(295, -154)
 
-[node name="Chilli5" parent="Items" instance=ExtResource("16_nsxjd")]
+[node name="Chilli5" parent="Items" instance=ExtResource("13_np6cm")]
 position = Vector2(262, -156)
 
-[node name="Key5" parent="Items" instance=ExtResource("10_6bbmg")]
+[node name="Key5" parent="Items" instance=ExtResource("12_m5yrj")]
 position = Vector2(314, 115)
 
 [node name="Interactable" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Stone" parent="Interactable" instance=ExtResource("9_xlne5")]
+[node name="Stone" parent="Interactable" instance=ExtResource("20_w3l6u")]
 position = Vector2(-36, -40)
 
-[node name="FallenTree" parent="Interactable" instance=ExtResource("8_pkbu3")]
+[node name="FallenTree" parent="Interactable" instance=ExtResource("21_jxpa3")]
 position = Vector2(39, -30)
 
-[node name="Tree" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-125, -210)
 
-[node name="Tree2" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree2" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-309, -142)
 
-[node name="Tree3" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree3" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-300, -216)
 
-[node name="Tree4" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree4" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-270, -219)
 
-[node name="Tree5" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree5" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-309, -180)
 
-[node name="Tree6" parent="Interactable" instance=ExtResource("18_qhjfe")]
+[node name="Tree6" parent="Interactable" instance=ExtResource("22_vkx1c")]
 position = Vector2(-241, -221)
 
-[node name="Stone2" parent="Interactable" instance=ExtResource("9_xlne5")]
+[node name="Stone2" parent="Interactable" instance=ExtResource("20_w3l6u")]
 position = Vector2(-151, 15)
 
-[node name="Stone3" parent="Interactable" instance=ExtResource("9_xlne5")]
+[node name="Stone3" parent="Interactable" instance=ExtResource("20_w3l6u")]
 position = Vector2(175, -17)
 
-[node name="Sunflower" parent="Interactable" instance=ExtResource("23_rkriy")]
+[node name="Sunflower" parent="Interactable" instance=ExtResource("23_0s38e")]
 position = Vector2(-150, -44)
 
-[node name="Sunflower2" parent="Interactable" instance=ExtResource("23_rkriy")]
+[node name="Sunflower2" parent="Interactable" instance=ExtResource("23_0s38e")]
 position = Vector2(-234, 60)
 
-[node name="Sunflower3" parent="Interactable" instance=ExtResource("23_rkriy")]
+[node name="Sunflower3" parent="Interactable" instance=ExtResource("23_0s38e")]
 position = Vector2(147, 104)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

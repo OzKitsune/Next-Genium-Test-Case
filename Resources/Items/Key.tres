@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bxu0wpqkh6en7"]
 
-[ext_resource type="Texture2D" uid="uid://b206yop52hanb" path="res://2D/Pixel Art Icon Pack/Misc/Golden Key.png" id="1_38kyx"]
-[ext_resource type="Script" path="res://Code/Item/List/Key.gd" id="2_di1ix"]
-[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_yj8gw"]
+[ext_resource type="Texture2D" uid="uid://b206yop52hanb" path="res://2d/pixel_art_icon_pack/key.png" id="1_38kyx"]
+[ext_resource type="Script" path="res://code/item/list/key.gd" id="2_di1ix"]
+[ext_resource type="Script" path="res://code/item/item_data.gd" id="3_yj8gw"]
 
 [resource]
 script = ExtResource("3_yj8gw")

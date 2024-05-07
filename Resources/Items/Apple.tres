@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c3uom5nllnv4a"]
 
-[ext_resource type="Texture2D" uid="uid://bro1o3h1c7ak" path="res://2D/Pixel Art Icon Pack/Food/Apple.png" id="1_p3lvm"]
-[ext_resource type="Script" path="res://Code/Item/List/Apple.gd" id="2_jcu60"]
-[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_85yd1"]
+[ext_resource type="Texture2D" uid="uid://bro1o3h1c7ak" path="res://2d/pixel_art_icon_pack/apple.png" id="1_p3lvm"]
+[ext_resource type="Script" path="res://code/item/list/apple.gd" id="2_jcu60"]
+[ext_resource type="Script" path="res://code/item/item_data.gd" id="3_85yd1"]
 
 [resource]
 script = ExtResource("3_85yd1")

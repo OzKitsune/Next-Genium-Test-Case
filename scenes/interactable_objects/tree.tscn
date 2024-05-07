@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://q3hsutcwchad"]
+
+[ext_resource type="Script" path="res://code/interactable.gd" id="1_p220u"]
+[ext_resource type="Texture2D" uid="uid://wlhwio3pgnut" path="res://2d/sprout_lands/objects/basic_grass_biom_things.png" id="2_ibsde"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lal6p"]
+atlas = ExtResource("2_ibsde")
+region = Rect2(48, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7avt"]
+size = Vector2(3.5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw2cf"]
+size = Vector2(15, 25.75)
+
+[node name="Tree" type="Node2D" node_paths=PackedStringArray("sprite", "body2D")]
+script = ExtResource("1_p220u")
+message = "Дерево!"
+sprite = NodePath("Sprite2D")
+body2D = NodePath("StaticBody2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = SubResource("AtlasTexture_lal6p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_d7avt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.125)
+shape = SubResource("RectangleShape2D_xw2cf")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

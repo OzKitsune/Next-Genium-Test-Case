@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bn6wtaw4fuicy"]
 
-[ext_resource type="Script" path="res://Code/HUD.gd" id="1_h4ehb"]
-[ext_resource type="PackedScene" uid="uid://2485kjqbujxt" path="res://Scenes/HUD/ItemStorageControl.tscn" id="2_7xotg"]
-[ext_resource type="Script" path="res://Code/Item/Control/Inventory.gd" id="2_86lyt"]
+[ext_resource type="Script" path="res://code/hud.gd" id="1_gpt8e"]
+[ext_resource type="Script" path="res://code/item/control/inventory.gd" id="2_qkxxi"]
+[ext_resource type="PackedScene" uid="uid://2485kjqbujxt" path="res://scenes/hud/item_storage_control.tscn" id="3_iopi7"]
 
 [sub_resource type="Animation" id="Animation_d2c8s"]
 length = 0.001
@@ -42,7 +42,7 @@ _data = {
 }
 
 [node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("hp_text_label", "keys_text_label", "message_text_label", "message_player", "inventory", "confirmation_dialog")]
-script = ExtResource("1_h4ehb")
+script = ExtResource("1_gpt8e")
 hp_text_label = NodePath("Control/PlayerInfo/VBoxContainer/HPRichTextLabel")
 keys_text_label = NodePath("Control/PlayerInfo/VBoxContainer/KeysRichTextLabel")
 message_text_label = NodePath("Control/Message/MessageRichTextLabel")
@@ -121,10 +121,10 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_86lyt")
+script = ExtResource("2_qkxxi")
 item_storage_control = NodePath("ItemStorageControl")
 
-[node name="ItemStorageControl" parent="Inventory" instance=ExtResource("2_7xotg")]
+[node name="ItemStorageControl" parent="Inventory" instance=ExtResource("3_iopi7")]
 layout_mode = 1
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]

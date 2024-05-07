@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dk7jwqhh3aoox"]
 
-[ext_resource type="Texture2D" uid="uid://cc63tmo56yjm8" path="res://2D/Pixel Art Icon Pack/Misc/Silver Coin.png" id="1_yx0d2"]
-[ext_resource type="Script" path="res://Code/Item/List/Token.gd" id="2_yjiie"]
-[ext_resource type="Script" path="res://Code/Item/ItemData.gd" id="3_s1085"]
+[ext_resource type="Texture2D" uid="uid://cc63tmo56yjm8" path="res://2d/pixel_art_icon_pack/coin.png" id="1_yx0d2"]
+[ext_resource type="Script" path="res://code/item/list/token.gd" id="2_yjiie"]
+[ext_resource type="Script" path="res://code/item/item_data.gd" id="3_s1085"]
 
 [resource]
 script = ExtResource("3_s1085")

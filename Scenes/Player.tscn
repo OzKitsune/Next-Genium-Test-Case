@@ -1,70 +1,70 @@
 [gd_scene load_steps=48 format=3 uid="uid://crqs6nufvnq3b"]
 
-[ext_resource type="Texture2D" uid="uid://cfc08m4vk6ooi" path="res://2D/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_omnyh"]
-[ext_resource type="Script" path="res://Code/Player.gd" id="1_pydml"]
+[ext_resource type="Script" path="res://code/player.gd" id="1_nym4k"]
+[ext_resource type="Texture2D" uid="uid://cfc08m4vk6ooi" path="res://2d/sprout_lands/characters/сharakter_spritesheet.png" id="2_q5ilu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlgqj"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fm2su"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_36y5h"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(0, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1inh"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(48, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqn7u"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(0, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdf5d"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(48, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3v8k"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(0, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg0iq"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(48, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lovss"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ampqd"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_diujs"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(96, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qroa5"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(144, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0ugg"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(96, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3abok"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(144, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3kt4"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(96, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qer4r"]
-atlas = ExtResource("1_omnyh")
+atlas = ExtResource("2_q5ilu")
 region = Rect2(144, 144, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jf80n"]
@@ -592,7 +592,7 @@ states/walk/position = Vector2(385, 210)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_5k0nk"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_ls6wu"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_61gdt")]
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("interaction_area", "animation_tree")]
-script = ExtResource("1_pydml")
+script = ExtResource("1_nym4k")
 speed = 60
 interaction_area = NodePath("Area2D")
 animation_tree = NodePath("AnimationTree")
